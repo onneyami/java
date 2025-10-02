@@ -1,19 +1,19 @@
-public class Book extends Note{  //extends означает наследование от Note
+public class Book extends Note {  // extends means inheritance from Note
     private String publishingHouse;
     private String publishingLocation;
     private int publishingYear;
     private int numberPage;
 
-    //конструктор для создания книги
+    // Constructor for creating a book
     public Book(String noteTitle, String authorNote, double numberAuthorsSheets, String publishingHouse, String publishingLocation, int publishingYear) {
-        super(noteTitle, authorNote, numberAuthorsSheets); //super вызывает родительский конструктор
+        super(noteTitle, authorNote, numberAuthorsSheets); // super calls the parent constructor
         this.publishingHouse = publishingHouse;
         this.publishingLocation = publishingLocation;
         this.publishingYear = publishingYear;
         numberPage = getNumberPages();
     }
 
-    //конструктор для создания книги с 2 авторами
+    // Constructor for creating a book with 2 authors
     public Book(String noteTitle, String author1Note, String author2Note, double numberAuthorsSheets, String publishingHouse, String publishingLocation, int publishingYear) {
         super(noteTitle, author1Note, author2Note, numberAuthorsSheets);
         this.publishingHouse = publishingHouse;
@@ -22,7 +22,7 @@ public class Book extends Note{  //extends означает наследован
         numberPage = getNumberPages();
     }
 
-    //конструктор для создания книги с 3 авторами
+    // Constructor for creating a book with 3 authors
     public Book(String noteTitle, String author1Note, String author2Note, String author3Note, double numberAuthorsSheets, String publishingHouse, String publishingLocation, int publishingYear) {
         super(noteTitle, author1Note, author2Note, author3Note, numberAuthorsSheets);
         this.publishingHouse = publishingHouse;
@@ -31,14 +31,14 @@ public class Book extends Note{  //extends означает наследован
         numberPage = getNumberPages();
     }
 
-    //метод формирующий инфу о списке
+    // Method that generates info about the list
     @Override
     public String toString() {
         String str = numberNote + " " + authorNote + " " + noteTitle + ". - " + publishingLocation + ".: " + publishingHouse + ", " + publishingYear + ".- " + numberPage + " p.";
         return str;
     }
 
-    //геттеры
+    // Getters
     public String getPublishingHouse() {
         return publishingHouse;
     }
@@ -51,7 +51,7 @@ public class Book extends Note{  //extends означает наследован
         return publishingYear;
     }
 
-    //сеттеры
+    // Setters
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
     }
