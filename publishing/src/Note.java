@@ -1,13 +1,13 @@
 public class Note {
 
-    //поля класса Note
+    // Fields of the Note class
     protected int numberNote;
     private static int lastNumberNote = 0;
     protected String noteTitle;
     protected String authorNote;
     protected double numberAuthorsSheets;
 
-    //конструктор с параметрами класса Note
+    // Constructor with parameters for the Note class
     public Note(String noteTitle, String authorNote, double numberAuthorsSheets) {
         numberNote = ++lastNumberNote;
         this.noteTitle = noteTitle;
@@ -15,7 +15,7 @@ public class Note {
         this.numberAuthorsSheets = numberAuthorsSheets;
     }
 
-    //второй конструктор с двумя авторами
+    // Second constructor with two authors
     public Note(String noteTitle, String author1Note, String author2Note, double numberAuthorsSheets) {
         numberNote = ++lastNumberNote;
         this.noteTitle = noteTitle;
@@ -23,7 +23,7 @@ public class Note {
         this.numberAuthorsSheets = numberAuthorsSheets;
     }
 
-    //третий конструктор с тремя авторами
+    // Third constructor with three authors
     public Note(String noteTitle, String author1Note, String author2Note, String author3Note, double numberAuthorsSheets) {
         numberNote = ++lastNumberNote;
         this.noteTitle = noteTitle;
@@ -31,13 +31,13 @@ public class Note {
         this.numberAuthorsSheets = numberAuthorsSheets;
     }
 
-    @Override //override переопределяет метод родительского класса
+    @Override // override redefines the method from the parent class
     public String toString() {
         String str = numberNote + " " + authorNote + " " + noteTitle + ", aut. pages: " + numberAuthorsSheets;
         return str;
     }
 
-    //геттеры
+    // Getters
     public static int getLastNumberNote() {
         return lastNumberNote;
     }
@@ -62,8 +62,7 @@ public class Note {
         return numberAuthorsSheets;
     }
 
-    //сеттеры
-
+    // Setters
     public void setNoteTitle(String noteTitle) {
         this.noteTitle = noteTitle;
     }
