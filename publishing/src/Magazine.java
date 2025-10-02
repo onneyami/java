@@ -2,13 +2,13 @@ public class Magazine {
     private String magazineTitle;
     private int numberMagazine;
     private int publishingYear;
-    private Note notes []; //массив статей
+    private Note[] notes; // array of articles
     private String publishingHouse;
     private String publishingLocation;
     private int numberPage;
     private Contents contents;
 
-    //конструктор создания журнала
+    // Constructor for creating a magazine
     public Magazine(String magazineTitle, int numberMagazine, int publishingYear, Note[] notes, String publishingHouse, String publishingLocation) {
         this.magazineTitle = magazineTitle;
         this.numberMagazine = numberMagazine;
@@ -17,11 +17,11 @@ public class Magazine {
         this.publishingHouse = publishingHouse;
         this.publishingLocation = publishingLocation;
 
-        //формирование оглавления
+        // Generate table of contents
         contents = new Contents(notes);
     }
 
-    //метод, формирующий инфу по журналу
+    // Method that generates magazine info
     @Override
     public String toString() {
         String str = "Magazine " + magazineTitle + " № " + numberMagazine + " " + publishingYear + ". - " + publishingLocation + ".: " + publishingHouse;
@@ -29,7 +29,7 @@ public class Magazine {
         return str;
     }
 
-    //геттеры
+    // Getters
     public String getMagazineTitle() {
         return magazineTitle;
     }
@@ -59,7 +59,7 @@ public class Magazine {
         return numberPage;
     }
 
-    //сеттеры
+    // Setters
     public void setNotes(Note[] notes) {
         this.notes = notes;
         contents.createContents(notes);
