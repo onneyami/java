@@ -1,6 +1,6 @@
 public class Author {
 
-    //поля класса Author
+    // Fields of the Author class
     private String surname;
     private String name;
     private String secondName;
@@ -8,7 +8,7 @@ public class Author {
     private String address;
     private String phoneNumber;
 
-    //конструктор со значениями класса Author
+    // Constructor with values for the Author class
     public Author(String surname, String name, String secondName, String passportData, String address, String phoneNumber) {
         this.surname = surname;
         this.name = name;
@@ -24,13 +24,13 @@ public class Author {
         return str;
     }
 
-    //метод, возвращающий фамилию и инициалы автора
+    // Method that returns the surname and initials of the author
     String getShortName(String surname, String name, String secondName) {
         String str = surname + " " + name.substring(0, 1) + "." + secondName.substring(0, 1) + ".";
         return str;
     }
 
-    //перегруженный метод, возарвщающий фамилию и инициалы автора
+    // Overloaded method that returns the surname and initials of the author
     String getShortName(String surname, String name) {
         String str = surname + " " + name.substring(0, 1) + ".";
         return str;
@@ -60,7 +60,7 @@ public class Author {
         return phoneNumber;
     }
 
-    //сеттеры
+    // Setters
 
     public void setName(String name) {
         this.name = name;
@@ -86,5 +86,3 @@ public class Author {
         this.phoneNumber = phoneNumber;
     }
 }
-
-
